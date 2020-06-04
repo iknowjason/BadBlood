@@ -27,24 +27,9 @@ $totalscripts = 7
 $i = 0
 cls
 write-host "Welcome to BadBlood"
-Write-Host  'Press any key to continue...';
-write-host "`n"
-$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
-write-host "The first tool that absolutely mucks up your TEST domain"
-write-host "This tool is never meant for production and can totally screw up your domain"
-Write-Host  'Press any key to continue...';
-write-host "`n"
-$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
-Write-Host  'Press any key to continue...';
-write-host "You are responsible for how you use this tool. It is intended for personal use only"
-write-host "This is not intended for commercial use"
-Write-Host  'Press any key to continue...';
-write-host "`n"
-$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
-write-host "`n"
-$badblood = Read-Host -Prompt "Type `'badblood`' to deploy some randomness into a domain"
-$badblood.tolower()
-if($badblood -ne 'badblood'){exit}
+
+$badblood = 'badblood'
+
 if($badblood -eq 'badblood'){
    $Domain = Get-addomain
     Write-Progress -Activity "Random Stuff into A domain" -Status "Progress:" -PercentComplete ($i/$totalscripts*100)
